@@ -1,0 +1,61 @@
+{
+  "brands": [
+    {
+      "id": 3,
+      "name": "Resnyanskaya Olga",
+      "prestige": true,
+      "categoryId": 1,
+      "assetClassId": 5,
+      "createdAt": "2019-03-12T18:55:31.352Z",
+      "updatedAt": "2019-03-12T18:55:31.352Z"
+    }
+  ],
+  "accounts": [
+    {
+      "id": 3,
+      "username": "resnyanskayaolgaa",
+      "userId": 1,
+      "platformId": 1,
+      "socialId": "17841404854587504",
+      "brandId": 3,
+      "countryId": 151,
+      "themeId": null,
+      "languageId": 108,
+      "createdAt": "2019-03-12T18:55:33.556Z",
+      "updatedAt": "2021-04-23T20:30:21.048Z",
+      "business": true,
+      "private": false,
+      "status": null,
+      "scraped_content": null,
+      "deleted_at": null,
+      "mention_detection": "CASE_INSENSITIVE",
+      "fetch_v2": false,
+      "fetch_v1": true,
+      "last_v1_fetched_datetime": "2021-04-22T20:29:05.443Z",
+      "last_v2_fetched_datetime": null
+    },
+    {
+      "id": 5,
+      "username": "andrey_color",
+      "userId": 1,
+      "platformId": 1,
+      "socialId": "4549934439",
+      "brandId": 5,
+      "countryId": 151,
+      "themeId": null,
+      "languageId": 108,
+      "createdAt": "2019-03-12T18:55:33.556Z",
+      "updatedAt": "2020-04-05T09:06:25.920Z",
+      "business": false,
+      "private": false,
+      "status": null,
+      "scraped_content": null,
+      "deleted_at": null,
+      "mention_detection": "CASE_INSENSITIVE",
+      "fetch_v2": false,
+      "fetch_v1": false,
+      "last_v1_fetched_datetime": null,
+      "last_v2_fetched_datetime": null
+    }
+  ]
+}

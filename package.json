@@ -1,0 +1,22 @@
+{
+  "name": "jsonizer",
+  "bin": {
+    "jsonizer": "jsonizer.js"
+  },
+  "version": "0.0.1",
+  "description": "Easily turn SQL databases content into JSON files",
+  "main": "jsonizer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luispablo/jsonizer.git"
+  },
+  "author": "@luispablo",
+  "license": "LGPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/luispablo/jsonizer/issues"
+  },
+  "homepage": "https://github.com/luispablo/jsonizer#readme"
+}
