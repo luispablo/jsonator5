@@ -3,7 +3,7 @@
   "bin": {
     "jsonizer": "jsonizer.js"
   },
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Easily turn SQL databases content into JSON files",
   "main": "jsonizer.js",
   "scripts": {
