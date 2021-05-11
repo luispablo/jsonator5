@@ -52,12 +52,16 @@ const sanityCheck = async function sanityCheck (fixtures, knex) {
   try {
     const FILENAME = process.env.FILENAME || "fixtures.json";
     const database = process.env.DBNAME;
+    const user = process.env.DBUSER;
+    const password = process.env.DBPASS;
+    const host = process.env.DBHOST;
     const target = process.argv[2].split("#");
     const [targetTable, targetID] = target;
 
     const fs = require("fs");
     const fixtures = fs.existsSync(FILENAME) ? JSON.parse(fs.readFileSync(FILENAME)) : {};
-    const knex = require("knex")({ client: "pg", connection: { database }});
+
+    const knex = require("knex")({ client: "pg", connection: { host, database, user, password }});
     const [currentValue] = (fixtures[targetTable] || []).filter(r => r.id === parseInt(targetID));
 
     if (currentValue) {
