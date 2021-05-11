@@ -1,8 +1,8 @@
-# jsonizer
+# jsonator5
 Easily turn SQL databases content into JSON files
 
 ```bash
-FILENAME=test/fixtures.json DBHOST=localhost DBNAME=youdb DBUSER=dbusr DBPASS=dbpass jsonizer languages#1
+FILENAME=test/fixtures.json DBHOST=localhost DBNAME=youdb DBUSER=dbusr DBPASS=dbpass jsonator5 languages#1
 ```
 
 - If FILENAME is omitted it'll use `fixtures.json` in the current directory.

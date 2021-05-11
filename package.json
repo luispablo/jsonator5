@@ -1,22 +1,19 @@
 {
-  "name": "jsonizer",
+  "name": "jsonator5",
   "bin": {
-    "jsonizer": "jsonizer.js"
+    "jsonizer": "jsonator5.js"
   },
   "version": "1.0.0",
   "description": "Easily turn SQL databases content into JSON files",
-  "main": "jsonizer.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "main": "jsonator5.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/luispablo/jsonizer.git"
+    "url": "git+https://github.com/luispablo/jsonator5.git"
   },
   "author": "@luispablo",
   "license": "LGPL-3.0-or-later",
   "bugs": {
-    "url": "https://github.com/luispablo/jsonizer/issues"
+    "url": "https://github.com/luispablo/jsonator5/issues"
   },
-  "homepage": "https://github.com/luispablo/jsonizer#readme"
+  "homepage": "https://github.com/luispablo/jsonator5#readme"
 }
