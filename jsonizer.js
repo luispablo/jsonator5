@@ -27,6 +27,8 @@ const getTableFKs = async function getTableFKs (knex, table) {
 };
 
 const sanityCheck = async function sanityCheck (fixtures, knex) {
+  const newRows = [];
+  
   for (table of Object.keys(fixtures)) {
     const tableFks = await getTableFKs(knex, table);
 
@@ -38,10 +40,12 @@ const sanityCheck = async function sanityCheck (fixtures, knex) {
         const rowFKValue = row[fk.column_name];
         const fixtureTable = fixtures[fk.foreign_table_name]; 
         const [fkRow] = (fixtureTable || []).filter(r => r[fk.foreign_column_name] === rowFKValue);
-        if (!fixtureTable || !fkRow) await addRow(fixtures, knex, fk.foreign_table_name, rowFKValue);
+        if (!fixtureTable || !fkRow) newRows.push(await addRow(fixtures, knex, fk.foreign_table_name, rowFKValue));
       }
     }
   }
+
+  return newRows;
 };
 
 (async function main () {
@@ -63,7 +67,8 @@ const sanityCheck = async function sanityCheck (fixtures, knex) {
       // Add requested row
       await addRow(fixtures, knex, targetTable, targetID);
       // Fix any issue
-      await sanityCheck(fixtures, knex);
+      let sanityCheckNewRows = await sanityCheck(fixtures, knex);
+      while (sanityCheckNewRows.length) sanityCheckNewRows = await sanityCheck(fixtures, knex);
       // Finally write to file
       fs.writeFileSync(FILENAME, JSON.stringify(fixtures, null, 2));
       process.exit(0);
